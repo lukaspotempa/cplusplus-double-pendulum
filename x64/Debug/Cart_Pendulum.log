@@ -4,5 +4,6 @@
   1 Datei(en) kopiert
   F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll
   1 Datei(en) kopiert
-  Cart_Pendulum.cpp
-  Cart_Pendulum.vcxproj -> F:\Projects\.NET\ConsoleApplication1\x64\Debug\Cart_Pendulum.exe
+  main.cpp
+F:\Projects\.NET\Cart_Pendulum\main.cpp(30,9): error C2059: syntax error: '{'
+F:\Projects\.NET\Cart_Pendulum\main.cpp(30,9): error C2143: syntax error: missing ';' before '{'

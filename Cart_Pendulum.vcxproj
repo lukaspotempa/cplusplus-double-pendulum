@@ -159,7 +159,23 @@ xcopy /y "F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll" "$(OutD
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cart_Pendulum.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Cart.cpp" />
+    <ClCompile Include="Trail.cpp" />
+    <ClCompile Include="SinglePendulum.cpp" />
+    <ClCompile Include="DoublePendulum.cpp" />
+    <ClCompile Include="Menu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.hpp" />
+    <ClInclude Include="Cart.hpp" />
+    <ClInclude Include="Constants.hpp" />
+    <ClInclude Include="DoublePendulum.hpp" />
+    <ClInclude Include="IPendulum.hpp" />
+    <ClInclude Include="Menu.hpp" />
+    <ClInclude Include="SinglePendulum.hpp" />
+    <ClInclude Include="Trail.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\cart-wheel.png" />
