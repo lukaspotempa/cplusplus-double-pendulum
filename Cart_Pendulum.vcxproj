@@ -100,7 +100,7 @@ xcopy /y "F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll" "$(OutD
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\core;$(ProjectDir)include\physics;$(ProjectDir)include\neat;$(ProjectDir)include\ui;$(ProjectDir)include\utils;F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@ xcopy /y "F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll" "$(OutD
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\core;$(ProjectDir)include\physics;$(ProjectDir)include\neat;$(ProjectDir)include\ui;$(ProjectDir)include\utils;F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -145,7 +145,7 @@ xcopy /y "F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll" "$(OutD
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\core;$(ProjectDir)include\physics;$(ProjectDir)include\neat;$(ProjectDir)include\ui;$(ProjectDir)include\utils;F:\Projects\.NET\libraries\SFML-3.0.2\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -161,42 +161,42 @@ xcopy /y "F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll" "$(OutD
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Cart.cpp" />
-    <ClCompile Include="NEAT.cpp" />
-    <ClCompile Include="NEATController.cpp" />
-    <ClCompile Include="Trail.cpp" />
-    <ClCompile Include="SinglePendulum.cpp" />
-    <ClCompile Include="DoublePendulum.cpp" />
-    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Cart.cpp" />
+    <ClCompile Include="src\NEAT.cpp" />
+    <ClCompile Include="src\NEATController.cpp" />
+    <ClCompile Include="src\Trail.cpp" />
+    <ClCompile Include="src\SinglePendulum.cpp" />
+    <ClCompile Include="src\DoublePendulum.cpp" />
+    <ClCompile Include="src\Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.hpp" />
-    <ClInclude Include="Cart.hpp" />
-    <ClInclude Include="ConnectionGene.hpp" />
-    <ClInclude Include="Constants.hpp" />
-    <ClInclude Include="Dashboard.hpp" />
-    <ClInclude Include="DoublePendulum.hpp" />
-    <ClInclude Include="Genome.hpp" />
-    <ClInclude Include="IPendulum.hpp" />
-    <ClInclude Include="Math.hpp" />
-    <ClInclude Include="Menu.hpp" />
-    <ClInclude Include="NEAT.hpp" />
-    <ClInclude Include="NEATController.hpp" />
-    <ClInclude Include="NetworkVisualizer.hpp" />
-    <ClInclude Include="Node.hpp" />
-    <ClInclude Include="Physics.hpp" />
-    <ClInclude Include="RoundedRectangle.hpp" />
-    <ClInclude Include="SinglePendulum.hpp" />
-    <ClInclude Include="Speciator.hpp" />
-    <ClInclude Include="Species.hpp" />
-    <ClInclude Include="Trail.hpp" />
-    <ClInclude Include="ThreadPool.hpp" />
-    <ClInclude Include="AgentSimulation.hpp" />
-    <ClInclude Include="SimulationManager.hpp" />
-    <ClInclude Include="TrainingHistory.hpp" />
-    <ClInclude Include="Graph.hpp" />
+    <ClInclude Include="include\core\Application.hpp" />
+    <ClInclude Include="include\core\Constants.hpp" />
+    <ClInclude Include="include\physics\Cart.hpp" />
+    <ClInclude Include="include\physics\IPendulum.hpp" />
+    <ClInclude Include="include\physics\SinglePendulum.hpp" />
+    <ClInclude Include="include\physics\DoublePendulum.hpp" />
+    <ClInclude Include="include\physics\Physics.hpp" />
+    <ClInclude Include="include\physics\AgentSimulation.hpp" />
+    <ClInclude Include="include\physics\Trail.hpp" />
+    <ClInclude Include="include\neat\NEAT.hpp" />
+    <ClInclude Include="include\neat\NEATController.hpp" />
+    <ClInclude Include="include\neat\Genome.hpp" />
+    <ClInclude Include="include\neat\ConnectionGene.hpp" />
+    <ClInclude Include="include\neat\Node.hpp" />
+    <ClInclude Include="include\neat\Species.hpp" />
+    <ClInclude Include="include\neat\Speciator.hpp" />
+    <ClInclude Include="include\neat\SimulationManager.hpp" />
+    <ClInclude Include="include\ui\Menu.hpp" />
+    <ClInclude Include="include\ui\Dashboard.hpp" />
+    <ClInclude Include="include\ui\NetworkVisualizer.hpp" />
+    <ClInclude Include="include\ui\RoundedRectangle.hpp" />
+    <ClInclude Include="include\ui\Graph.hpp" />
+    <ClInclude Include="include\ui\TrainingHistory.hpp" />
+    <ClInclude Include="include\utils\Math.hpp" />
+    <ClInclude Include="include\utils\ThreadPool.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\cart-wheel.png" />

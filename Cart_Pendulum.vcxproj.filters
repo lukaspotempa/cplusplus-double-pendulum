@@ -9,6 +9,21 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-4789-a1b2-c3d4e5f67890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{b2c3d4e5-f678-4901-b2c3-d4e5f6789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NEAT">
+      <UniqueIdentifier>{c3d4e5f6-7890-4123-c3d4-e5f678901234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{d4e5f678-9012-4345-d4e5-f67890123456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{e5f67890-1234-4567-e5f6-789012345678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -18,109 +33,109 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cart.cpp">
+    <ClCompile Include="src\Cart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Trail.cpp">
+    <ClCompile Include="src\Trail.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SinglePendulum.cpp">
+    <ClCompile Include="src\SinglePendulum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DoublePendulum.cpp">
+    <ClCompile Include="src\DoublePendulum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="src\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NEAT.cpp">
+    <ClCompile Include="src\NEAT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NEATController.cpp">
+    <ClCompile Include="src\NEATController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\core\Application.hpp">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Cart.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\core\Constants.hpp">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Constants.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\Cart.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="DoublePendulum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\IPendulum.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="IPendulum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\SinglePendulum.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\DoublePendulum.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="SinglePendulum.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\Physics.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Trail.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\AgentSimulation.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="ConnectionGene.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\physics\Trail.hpp">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
-    <ClInclude Include="Genome.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\NEAT.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="Node.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\NEATController.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="Math.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\Genome.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="Species.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\ConnectionGene.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="Speciator.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\Node.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="NEAT.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\Species.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="NEATController.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\Speciator.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="NetworkVisualizer.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\neat\SimulationManager.hpp">
+      <Filter>Header Files\NEAT</Filter>
     </ClInclude>
-    <ClInclude Include="ThreadPool.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\Menu.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="AgentSimulation.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\Dashboard.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="SimulationManager.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\NetworkVisualizer.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="Dashboard.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\RoundedRectangle.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="TrainingHistory.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\Graph.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="Graph.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\ui\TrainingHistory.hpp">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
-    <ClInclude Include="Physics.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\utils\Math.hpp">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="RoundedRectangle.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\utils\ThreadPool.hpp">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
