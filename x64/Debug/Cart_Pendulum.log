@@ -1,9 +1,0 @@
-﻿  F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-graphics-d-3.dll
-  1 Datei(en) kopiert
-  F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-window-d-3.dll
-  1 Datei(en) kopiert
-  F:\Projects\.NET\libraries\SFML-3.0.2\bin\sfml-system-d-3.dll
-  1 Datei(en) kopiert
-  main.cpp
-F:\Projects\.NET\Cart_Pendulum\main.cpp(30,9): error C2059: syntax error: '{'
-F:\Projects\.NET\Cart_Pendulum\main.cpp(30,9): error C2143: syntax error: missing ';' before '{'
