@@ -227,6 +227,7 @@ void NEATController::startReplay(int agentIndex) {
     
     m_selectedAgentIndex = agentIndex;
     m_replayTime = 0.0f;
+    m_replayTimeAccumulator = 0.0f;
     m_replayGenome = genome;
     m_state = NEATState::Replaying;
     
@@ -244,15 +245,21 @@ bool NEATController::updateReplay(float dt) {
         return true;
     }
     
+s
+    constexpr float SIM_DT = 0.016f;
+    m_replayTimeAccumulator += dt;
+    
     // Run physics simulation with genome controlling cart
-    if (!m_replaySimulation.done) {
+    // Step multiple times if frame longer than SIM_DT
+    while (m_replayTimeAccumulator >= SIM_DT && !m_replaySimulation.done) {
         std::vector<float> inputs = prepareInputs(m_replaySimulation);
         
         std::vector<float> outputs = m_replayGenome->evaluate(inputs);
         float control = outputs.empty() ? 0.0f : std::clamp(outputs[0], -1.0f, 1.0f);
         
         // Step physics
-        m_replaySimulation.step(dt, control, true);
+        m_replaySimulation.step(SIM_DT, control, true);
+        m_replayTimeAccumulator -= SIM_DT;
     }
     
     m_replayTime += dt;

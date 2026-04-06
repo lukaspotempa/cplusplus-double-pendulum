@@ -139,6 +139,7 @@ private:
     // Real-time replay state
     AgentSimulation m_replaySimulation;  // Live replay
     Genome* m_replayGenome = nullptr;    // Pointer to genome being replayed
+    float m_replayTimeAccumulator = 0.0f;
     
     // Batch training state
     int m_batchTotalGens = 0;
