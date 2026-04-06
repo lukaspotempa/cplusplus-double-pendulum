@@ -91,7 +91,6 @@ struct AgentSimulation {
         }
         cartX = clampedX;
         
-        // ---- Pendulum physics using shared Physics module ----
         Physics::PendulumParams params = Physics::agentParams();
         params.pendulumLength = pendulumLength;
         params.pendulumDamping = pendulumDamping;
@@ -121,7 +120,7 @@ struct AgentSimulation {
                     
 
                     float baseReward = 1.0f;
-                    fitness += baseReward * centerBonus;
+                    fitness += baseReward * (2 * centerBonus);
                     
                     completedUprightSeconds = newCompletedSeconds;
                 }
