@@ -245,7 +245,7 @@ bool NEATController::updateReplay(float dt) {
         return true;
     }
     
-s
+
     constexpr float SIM_DT = 0.016f;
     m_replayTimeAccumulator += dt;
     
