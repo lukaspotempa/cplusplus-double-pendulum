@@ -11,16 +11,16 @@ namespace Constants {
 
     // Agent Physics
     constexpr float AGENT_GRAVITY = 1000.0f;
-    constexpr float AGENT_CART_DAMPING = 0.98f;
-    constexpr float AGENT_PENDULUM_DAMPING = 0.998f;
-    constexpr float AGENT_CART_PENDULUM_COUPLING = 0.50f;
+    constexpr float AGENT_CART_DAMPING = 0.99f;
+    constexpr float AGENT_PENDULUM_DAMPING = 0.99f;
+    constexpr float AGENT_CART_PENDULUM_COUPLING = 0.70f;
     constexpr float AGENT_PENDULUM_LENGTH = 200.0f;
     
-    // Manual Physics (when using pendulum maual)
+    // Manual Physics (when using pendulum manually)
     constexpr float MANUAL_GRAVITY = 1000.0f;
-    constexpr float MANUAL_CART_DAMPING = 0.98f;
-    constexpr float MANUAL_PENDULUM_DAMPING = 0.998f;
-    constexpr float MANUAL_CART_PENDULUM_COUPLING = 0.50f;
+    constexpr float MANUAL_CART_DAMPING = 0.99f;
+    constexpr float MANUAL_PENDULUM_DAMPING = 0.99f;
+    constexpr float MANUAL_CART_PENDULUM_COUPLING = 0.70f;
     
 
     // TODO: replace old variables with new constants

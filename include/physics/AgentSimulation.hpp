@@ -118,9 +118,11 @@ struct AgentSimulation {
                     float normalizedPos = cartX / rightBound;
                     float centerBonus = std::abs(1.0f - std::abs(normalizedPos));
                     
+                    float stabilityBonus = 1.0f / (1.0f + std::abs(thetaDot) + std::abs(cartVel) * 0.001f);
 
-                    float baseReward = 1.0f;
-                    fitness += baseReward * (2 * centerBonus);
+                    float baseReward = 1.0f * secondsToReward;
+                    
+                    fitness += baseReward * (centerBonus * 5.0f) * stabilityBonus;
                     
                     completedUprightSeconds = newCompletedSeconds;
                 }

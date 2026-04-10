@@ -114,7 +114,7 @@ public:
     static constexpr int NUM_OUTPUTS = 1;
     static constexpr float ELITE_RATIO = 0.30f;  
     static constexpr float MUTATION_RATIO = 0.70f;
-    static constexpr int DEFAULT_POPULATION_SIZE = 1000; // Experimenting with high populations
+    static constexpr int DEFAULT_POPULATION_SIZE = 1000;
 
 private:
     std::vector<Genome> createNextGeneration();
