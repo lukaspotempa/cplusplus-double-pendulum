@@ -48,11 +48,11 @@ Application::Application()
     
     float pixelsPerUnit = m_simTrackWidth / 1500.0f;
     
-    for (int unit = -750; unit <= 750; unit += 100) {
+    for (int unit = -700; unit <= 700; unit += 100) {
         float tickX = m_simCenterX + unit * pixelsPerUnit;
         
         bool isMajor = (unit % 200 == 0);
-        float tickHeight = isMajor ? 20.0f : 10.0f;
+        float tickHeight = isMajor ? 20.0f : 15.f;
         float tickWidth = isMajor ? 2.0f : 1.0f;
         
         sf::RectangleShape tick;
@@ -81,7 +81,7 @@ Application::Application()
     // Create ruler labels
     if (m_fontLoaded) {
         float rulerLabelY = rulerY + 22.0f;
-        for (int unit = -800; unit <= 800; unit += 200) { 
+        for (int unit = -700; unit <= 700; unit += 200) { 
             float tickX = m_simCenterX + unit * pixelsPerUnit;
             
             sf::Text label(m_font, std::to_string(unit / 100), 11);
@@ -718,7 +718,7 @@ void Application::drawInfoBox() {
     float boxY = boxPos.y + 12.0f;
     
     // Get generation info
-    int totalGens = m_neatController ? m_neatController->getHistory().getGenerationCount() : 0;
+    int totalGens = m_neatController ? m_neatController->getHistory().getLastGenerationNumber() : 0;
     int currentGen = m_neatController ? m_neatController->getGeneration() : 0;
     
     // Title
