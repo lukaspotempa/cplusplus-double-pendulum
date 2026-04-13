@@ -657,7 +657,7 @@ private:
         
         target.draw(m_background, states);
         
-        // Titl
+        // Title
         sf::Text title(m_font, "Training Dashboard", 18);
         title.setFillColor(Constants::COLOR_EMERALD_400);
         title.setStyle(sf::Text::Bold);
@@ -665,15 +665,10 @@ private:
         target.draw(title, states);
         
         // Training control label
-        sf::Text trainLabel(m_font, "Train for:", 13);
+        sf::Text trainLabel(m_font, "Train generations", 13);
         trainLabel.setFillColor(Constants::COLOR_ZINC_400);
         trainLabel.setPosition({m_position.x + PADDING, m_position.y + 50});
         target.draw(trainLabel, states);
-        
-        sf::Text genLabel(m_font, "generations", 13);
-        genLabel.setFillColor(Constants::COLOR_ZINC_400);
-        genLabel.setPosition({m_position.x + 95, m_position.y + 50});
-        target.draw(genLabel, states);
         
         // inputs and buttons
         target.draw(m_trainCountInput, states);

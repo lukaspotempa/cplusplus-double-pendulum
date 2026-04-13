@@ -20,7 +20,7 @@ public:
     
     float getTheta() const { return theta; }
     float getThetaDot() const { return thetaDot; }
-    float getMass() const { return mass; }
+    float getMass() const { return mass; } 
     float getLength() const { return length; }
     sf::Vector2f getBobPos() const;
     

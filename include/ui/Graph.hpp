@@ -24,6 +24,8 @@ public:
         m_gridLines.setPrimitiveType(sf::PrimitiveType::Lines);
         m_dataLine.setPrimitiveType(sf::PrimitiveType::LineStrip);
         m_dataLine2.setPrimitiveType(sf::PrimitiveType::LineStrip);
+        m_dataFill.setPrimitiveType(sf::PrimitiveType::TriangleStrip);
+        m_dataFill2.setPrimitiveType(sf::PrimitiveType::TriangleStrip);
     }
     
     void setFont(const sf::Font& font) {
@@ -71,11 +73,13 @@ private:
         target.draw(m_background, states);
         target.draw(m_gridLines, states);
         
-        if (m_data.size() >= 2) {
-            target.draw(m_dataLine, states);
-        }
         if (m_data2.size() >= 2) {
+            target.draw(m_dataFill2, states);
             target.draw(m_dataLine2, states);
+        }
+        if (m_data.size() >= 2) {
+            target.draw(m_dataFill, states);
+            target.draw(m_dataLine, states);
         }
         
         // Draw data points
@@ -93,6 +97,8 @@ private:
         m_gridLines.clear();
         m_dataLine.clear();
         m_dataLine2.clear();
+        m_dataFill.clear();
+        m_dataFill2.clear();
         m_dataPoints.clear();
         m_labels.clear();
         
@@ -181,6 +187,8 @@ private:
         title.setPosition({m_position.x + m_size.x / 2.0f - title.getLocalBounds().size.x / 2.0f, m_position.y + 5.0f});
         m_labels.push_back(title);
         
+        sf::Color fillColor(m_lineColor.r, m_lineColor.g, m_lineColor.b, 50);
+        
         // Data line
         for (const auto& point : m_data) {
             float xRatio = (static_cast<float>(point.first) - minX) / (maxX - minX);
@@ -191,12 +199,18 @@ private:
             
             m_dataLine.append(sf::Vertex(sf::Vector2f(x, y), m_lineColor));
             
+            // Fill area
+            m_dataFill.append(sf::Vertex(sf::Vector2f(x, y), fillColor));
+            m_dataFill.append(sf::Vertex(sf::Vector2f(x, plotY + plotHeight), fillColor));
+            
             // Point marker
             sf::CircleShape marker(3.0f);
             marker.setFillColor(m_lineColor);
             marker.setPosition({x - 3.0f, y - 3.0f});
             m_dataPoints.push_back(marker);
         }
+        
+        sf::Color fill2Color(m_line2Color.r, m_line2Color.g, m_line2Color.b, 50);
         
         // Secondary data line
         for (const auto& point : m_data2) {
@@ -207,6 +221,10 @@ private:
             float y = plotY + plotHeight - (yRatio * plotHeight);
             
             m_dataLine2.append(sf::Vertex(sf::Vector2f(x, y), m_line2Color));
+            
+            // Fill area
+            m_dataFill2.append(sf::Vertex(sf::Vector2f(x, y), fill2Color));
+            m_dataFill2.append(sf::Vertex(sf::Vector2f(x, plotY + plotHeight), fill2Color));
         }
     }
     
@@ -228,6 +246,8 @@ private:
     sf::VertexArray m_gridLines;
     sf::VertexArray m_dataLine;
     sf::VertexArray m_dataLine2;
+    sf::VertexArray m_dataFill;
+    sf::VertexArray m_dataFill2;
     mutable std::vector<sf::CircleShape> m_dataPoints;
     mutable std::vector<sf::Text> m_labels;
 };

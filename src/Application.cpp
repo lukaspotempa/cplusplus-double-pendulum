@@ -64,7 +64,7 @@ Application::Application()
     
     m_infoBox = std::make_unique<RoundedRectangle>(
         containerPadding + 15.0f, topBarHeight + 15.0f,
-        200.0f, 70.0f,
+        160.0f, 75.0f,
         8.0f,  // corner radius
         Constants::COLOR_ZINC_800,
         Constants::COLOR_EMERALD_600,
@@ -714,30 +714,30 @@ void Application::drawInfoBox() {
     if (!m_fontLoaded) return;
     
     sf::Vector2f boxPos = m_infoBox->getPosition();
-    float boxX = boxPos.x + 15.0f;
-    float boxY = boxPos.y + 12.0f;
+    float boxX = boxPos.x + 8.0f;
+    float boxY = boxPos.y + 8.0f;
     
     // Get generation info
     int totalGens = m_neatController ? m_neatController->getHistory().getLastGenerationNumber() : 0;
     int currentGen = m_neatController ? m_neatController->getGeneration() : 0;
     
     // Title
-    sf::Text titleText(m_font, "Generation Info", 13);
+    sf::Text titleText(m_font, "Generation Info", 16);
     titleText.setFillColor(Constants::COLOR_EMERALD_400);
     titleText.setStyle(sf::Text::Bold);
     titleText.setPosition({boxX, boxY});
     m_window.draw(titleText);
     
     // Total generations
-    sf::Text totalLabel(m_font, "Total Generations: " + std::to_string(totalGens), 12);
+    sf::Text totalLabel(m_font, "Total Generations: " + std::to_string(totalGens), 13);
     totalLabel.setFillColor(Constants::COLOR_ZINC_400);
-    totalLabel.setPosition({boxX, boxY + 20.0f});
+    totalLabel.setPosition({boxX, boxY + 25.0f});
     m_window.draw(totalLabel);
     
     // Current generation
-    sf::Text currentLabel(m_font, "Current Generation: " + std::to_string(currentGen - 1), 12);
+    sf::Text currentLabel(m_font, "Current Generation: " + std::to_string(currentGen - 1), 13);
     currentLabel.setFillColor(Constants::COLOR_ZINC_400);
-    currentLabel.setPosition({boxX, boxY + 38.0f});
+    currentLabel.setPosition({boxX, boxY + 42.0f});
     m_window.draw(currentLabel);
 }
 
