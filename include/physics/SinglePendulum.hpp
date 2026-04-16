@@ -28,7 +28,6 @@ public:
     
     void setTheta(float angle) { theta = angle; }
     void setThetaDot(float vel) { thetaDot = vel; }
-    void setPivot(sf::Vector2f pivot) { pivotPos = pivot; }
     
     void setRenderMode(RenderMode mode) { m_renderMode = mode; }
     RenderMode getRenderMode() const { return m_renderMode; }
@@ -38,6 +37,8 @@ public:
     
     void setAlpha(uint8_t alpha) override { m_alpha = alpha; }
     uint8_t getAlpha() const override { return m_alpha; }
+    
+    void setPivot(sf::Vector2f pivot) override { pivotPos = pivot; }
     
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

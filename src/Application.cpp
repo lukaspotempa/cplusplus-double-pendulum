@@ -914,6 +914,7 @@ void Application::toggleDemo(bool enabled) {
         p->setTheta(3.14159265f + 0.1f);
         p->setInitialTheta(3.14159265f + 0.1f);
         p->setDamping(1.0f);
+        p->setPivot(m_demoCarts.back().getPivot());
         m_demoPendulums.push_back(std::move(p));
     } else {
         m_demoCarts.clear();
@@ -955,6 +956,7 @@ void Application::advanceDemoState() {
         p->setInitialTheta2(3.14159265f + 0.1f);
         p->setDamping(1.0f);
         p->setTrailEnabled(true);
+        p->setPivot(m_demoCarts.back().getPivot());
         m_demoPendulums.push_back(std::move(p));
     }
     else if (m_demoState == 6) {
@@ -972,6 +974,7 @@ void Application::advanceDemoState() {
             p->setDamping(1.0f);
             p->setTrailEnabled(true);
             p->setAlpha(50);
+            p->setPivot(m_demoCarts.back().getPivot());
             m_demoPendulums.push_back(std::move(p));
         }
     }

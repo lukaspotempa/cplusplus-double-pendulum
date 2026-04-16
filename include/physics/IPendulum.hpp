@@ -20,4 +20,6 @@ public:
     
     virtual void setAlpha(uint8_t alpha) = 0;
     virtual uint8_t getAlpha() const = 0;
+    
+    virtual void setPivot(sf::Vector2f pivot) = 0;
 };

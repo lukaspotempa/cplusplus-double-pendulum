@@ -23,6 +23,8 @@ public:
     void setAlpha(uint8_t alpha) override { m_alpha = alpha; }
     uint8_t getAlpha() const override { return m_alpha; }
     
+    void setPivot(sf::Vector2f pivot) override { pivotPos = pivot; }
+    
     void setInitialTheta1(float angle) { initialTheta1 = angle; }
     void setInitialTheta2(float angle) { initialTheta2 = angle; }
     void setTheta1(float angle) { theta1 = angle; }
